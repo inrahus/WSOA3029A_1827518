@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+    box-shadow: 0px 3.5px 10px rgba(0, 0, 0, 0.5);
+
+    position: sticky;
+    top: 0px;
+
+    background: black;
+}
+
+nav{
+    min-height: 10vh;
+    margin: auto;
+    width: 90%;
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    
+
+}
+
+nav h1, nav ul {
+    font-size: 1.5 rem;
+
+    flex: 1;
+
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+section h2 {
+    font-size: 5rem;
+    color: white;
+}
+
+.Home {
+    background: linear-gradient(to left top, #22B9C4,  #203A43);
+}
+
+.About {
+    background: linear-gradient(to left top, #22C45C, #203A43);
+}
+
+.Content {
+    background: linear-gradient(to left top, #B7C422, #203A43);
+}
+
+.Contact {
+    background: linear-gradient(to left top, #C48C22, #203A43);
+}
+
+.Academics {
+    background: linear-gradient(to left top, #C44922, #203A43);
+}
+
+.swoosh {
+    position: absolute;
+    z-index: -2;
+
+    transform: scale(1.5);
+
+    background: linear-gradient(to left top, #22B9C4,  #203A43);
+
+    transition: all 0.5s ease;
+
+    border-radius: 10px;
+}
+
