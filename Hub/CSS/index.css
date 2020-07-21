@@ -9,28 +9,30 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-header {
+
+
+nav{
+    height: 10vh;
+    margin: auto;
+    width: 100%;
+    display: flex;
+
+    background-color: black;
     box-shadow: 0px 3.5px 10px rgba(0, 0, 0, 0.5);
+
+    align-items: center;
+    justify-content: space-between;
 
     position: sticky;
     top: 0px;
 
-    background: black;
-}
-
-nav{
-    min-height: 10vh;
-    margin: auto;
-    width: 90%;
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
+    z-index: 1; 
 }
 
 nav h1, nav ul {
-    font-size: 1.5 rem;
+    font-size: 1.25rem;
 
+    padding: 5vh 5vh 5vh 5vh;
     flex: 1;
 
     color: white;
@@ -40,11 +42,13 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
+    
 }
 
 nav a {
     color: white;
     text-decoration: none;
+    margin: 0.5vh 2vh 0.5vh 2vh;
 }
 
 section {
@@ -84,7 +88,8 @@ section h2 {
 
 .swoosh {
     position: absolute;
-    z-index: -2;
+    
+    z-index: -1;
 
     transform: scale(1.5);
 
@@ -139,4 +144,80 @@ section h2 {
 
 .Contact ul li a:hover{
     transform: translate(0, -20px);
+}
+
+.menuicon{
+    display: none;
+    margin: 2vh;
+}
+
+.line1, .line2, .line3{
+    width: 30px;
+    height: 5px;
+    margin: 5px;
+
+    background-color: white;
+    border-radius: 15%;
+
+    transition: all 0.3s ease;
+}
+
+
+@media screen and (max-width: 768px){
+    body{
+        overflow: hidden;
+    }  
+  
+    nav ul {
+       position: absolute;
+       right: 0px;
+       height: 92vh;
+       top: 8vh;
+
+       width: 40%;
+
+       background-color: black;
+
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+
+       transform: translate(100%);
+       transition: tranform 0.5s ease-in;
+   }
+s
+   nav ul li{
+       opacity: 0;
+   }
+
+   .menuicon{
+       display: block;
+   }
+}
+
+.nav-active{
+transform: translateX(0);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-6px, 8px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-6px, -8px);
 }
