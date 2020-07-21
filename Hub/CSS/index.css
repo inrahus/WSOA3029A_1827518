@@ -164,11 +164,20 @@ section h2 {
 
 
 @media screen and (max-width: 768px){
+    .swoosh{
+        display: none;
+    }
+
+    html{
+        overflow-x: hidden;
+    }
+   
     body{
-        overflow: hidden;
+        overflow-x: hidden;
+        position: relative;
     }  
-  
-    nav ul {
+
+    .nav-links {
        position: absolute;
        right: 0px;
        height: 92vh;
@@ -183,9 +192,10 @@ section h2 {
        align-items: center;
 
        transform: translate(100%);
+
        transition: tranform 0.5s ease-in;
    }
-s
+
    nav ul li{
        opacity: 0;
    }
