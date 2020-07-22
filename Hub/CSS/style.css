@@ -155,9 +155,9 @@ section h2 {
     width: 30px;
     height: 5px;
     margin: 5px;
+    border-radius: 15%;
 
     background-color: white;
-    border-radius: 15%;
 
     transition: all 0.3s ease;
 }
@@ -197,6 +197,28 @@ section h2 {
 
    .menuicon{
        display: block;
+   }
+
+   nav a::after{
+       content: '';
+
+       width: 0%;
+       height: 4px;
+       
+       position: absolute;
+       bottom: -20%;
+       left: 50%;
+
+       border-radius: 10px;
+
+       background: linear-gradient(to right,#22B9C4, #22C45C, #B7C422, #C48C22, #C44922), #203A43;
+
+       transition: 500ms ease;
+   }
+
+   nav a:hover::after{
+       left: 0%;
+       width: 100%;
    }
 }
 
