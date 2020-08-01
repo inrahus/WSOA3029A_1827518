@@ -9,8 +9,6 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
-
 nav{
     height: 10vh;
     margin: auto;
@@ -42,7 +40,6 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    
 }
 
 nav a {
@@ -369,4 +366,50 @@ margin: 5vh;
     transform: translate(0, -10px);
 
     color: #d45731;
+}
+
+.other-Home{
+    padding: 1vh 2vh;
+    border-radius: 10px;
+
+    transition: all 0.8s ease;
+}
+
+.other-Home:hover{
+    background: linear-gradient(to left top, #22B9C4,  #203A43);
+}
+
+.other-About{
+    padding: 1vh 2vh;
+    border-radius: 10px;
+
+    transition: all 0.8s ease;
+}
+
+.other-About:hover{
+    background: linear-gradient(to left top, #22C45C, #203A43);
+}
+.other-Content{
+    padding: 1vh 2vh;
+    border-radius: 10px;
+
+    transition: all 0.8s ease;
+}
+
+.other-Content:hover{
+    background: linear-gradient(to left top, #B7C422, #203A43);
+}
+.other-Academics{
+    padding: 1vh 2vh;
+    border-radius: 10px;
+
+    transition: all 0.8s ease;
+}
+
+.other-Academics:hover{
+    background: linear-gradient(to left top, #C44922, #203A43);
+}
+
+.theory-blog {
+    background: linear-gradient(to left top, #C44922, #203A43);
 }
