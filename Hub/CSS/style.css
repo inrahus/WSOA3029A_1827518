@@ -207,7 +207,7 @@ section h2 {
 
        border-radius: 10px;
 
-       background: linear-gradient(to right,#22B9C4, #22C45C, #B7C422, #C48C22, #C44922), #203A43;
+       background: linear-gradient(to right,#22B9C4, #22C45C, #B7C422, #C48C22, #C44922, #203A43);
 
        transition: 500ms ease;
    }
@@ -219,8 +219,8 @@ section h2 {
 
    .blog-cards{
        flex-direction: column;
+       flex-wrap: wrap;
    }
-
 
 }
 
@@ -253,11 +253,12 @@ transform: translateX(0);
 
 .blog-cards{
     display: flex;
-
+    flex-wrap: wrap;
+    
     padding: 1.5vh;
 }
 
-.blog-cards p{
+.blog-cards p, .recent-card p{
     color:white;
 
     font-size: 0.75rem;
@@ -266,7 +267,7 @@ transform: translateX(0);
     padding: 1vh;
 }
 
-.blog-cards h3{
+.blog-cards h3, .recent-card h3{
     color: whitesmoke;
 
     font-size: 1rem;
@@ -276,12 +277,12 @@ transform: translateX(0);
     padding: 1vh;
 }
 
-.blog-cards time{
+.blog-cards time, .recent-card time{
     color: rgb(231, 230, 230);
 
     font-size: 0.6rem;
 }
-.card1, .card2, .card3{
+.card1, .card2, .card3, .recent-card{
 display: grid;
 
 grid-template-columns: 40vh;
@@ -302,7 +303,7 @@ cursor: pointer;
 margin: 5vh;
 }
 
-.card1-image, .card2-image, .card3-image{
+.card1-image, .card2-image, .card3-image, .recent-card-image{
     grid-area: image;
 
     border-top-left-radius: 15px;
@@ -323,17 +324,49 @@ margin: 5vh;
     background-image: url(Images/Representation.jpg);
 }
 
-.card1-text, .card2-text, .card3-text{
+.recent-card-image{
+    background-image: url(Images/Representation.jpg);
+}
+
+.card1-text, .card2-text, .card3-text, .recent-card-text{
     grid-area: text;
 
     margin: 25px;
 }
 
-.card1:hover, .card2:hover, .card3:hover{
+.card1:hover, .card2:hover, .card3:hover, .recent-card:hover{
     transform: scale(1.1);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
 
-.blog-cards-link-1, .blog-cards-link-2, .blog-cards-link-3{
+.blog-cards-link-1, .blog-cards-link-2, .blog-cards-link-3, .recent-card-link{
     text-decoration: none;
+}
+
+.viewbtn{
+    position: relative;
+    display: inline-block;
+    
+    padding: 1vh 2vh;
+    
+    color: white;
+    background-color: black;
+    box-shadow: 0px 3.5px 10px rgba(0, 0, 0, 0.7);
+    
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 1.15rem;
+    font-weight: bolder;
+
+    transition: 0.8s ease;
+
+    cursor: pointer;
+}
+
+.viewbtn:hover{
+    transform: translate(0, -10px);
+
+    color: #d45731;
 }

@@ -6,7 +6,6 @@ const gradients = [
     "linear-gradient(to left top, #22B9C4,  #203A43)",
     "linear-gradient(to left top, #22C45C, #203A43)",
     " linear-gradient(to left top, #B7C422, #203A43)",
-    "linear-gradient(to left top, #C48C22, #203A43)",
     " linear-gradient(to left top, #C44922, #203A43)"
 ];
 
