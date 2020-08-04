@@ -345,6 +345,7 @@ margin: 5vh;
     display: inline-block;
     
     padding: 1vh 2vh;
+    margin: 1vh 2vh;
     
     color: white;
     background-color: black;
@@ -412,4 +413,16 @@ margin: 5vh;
 
 .theory-blog {
     background: linear-gradient(to left top, #C44922, #203A43);
+}
+
+.theory-blog p {
+    margin: 1vw 10vw 1vw 10vw;
+
+    text-align: justify;
+
+    color: white;
+}
+
+.blog-buttons{
+    display: flex;
 }
