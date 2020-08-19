@@ -36,7 +36,7 @@ function navChecker(entries) {
             left: coords.left
         };
 
-        //check/make visibility
+        //check/make visible
         if (entry.isIntersecting) {
             swoosh.style.setProperty('left', `${directions.left}px`);
             swoosh.style.setProperty('top', `${directions.top}px`);
