@@ -416,18 +416,31 @@ margin: 5vh;
     background: linear-gradient(to left top, #C44922, #203A43);
 }
 
+.content-blog{
+    margin: 1vw 20vw 1.5vw 20vw;
+
+    background-color: black;
+
+    border-radius: 10px;
+}
+
 .theory-blog p {
-    margin: 1vw 10vw 1vw 10vw;
+
+    margin: 1vw 5vw 1vw 5vw;
 
     text-align: justify;
 
     color: white;
 
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 .theory-blog h2{
-    font-size: 2.5re,;
+    font-size: 2rem;
+
+    margin: 2vw;
+
+    text-align: center;
 }
 
 .blog-buttons{
