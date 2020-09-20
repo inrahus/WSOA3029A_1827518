@@ -138,10 +138,6 @@ section h2 {
     transform: translate(0, -20px);
 }
 
-.about-content p{
-    color: white;
-    font-size: 100px;
-}
 
 .menuicon{
     display: none;
@@ -319,7 +315,7 @@ margin: 5vh;
 }
 
 .card2-image{
-    background-image: url(Images/Representation.jpg);
+    background-image: url(Images/DataVisuals.jpg);
 }
 
 .card3-image{
@@ -446,6 +442,10 @@ margin: 5vh;
     margin: 2vw;
 
     text-align: center;
+}
+
+.DVIMG{
+    height: 25vw;
 }
 
 .blog-buttons{
