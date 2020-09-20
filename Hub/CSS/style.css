@@ -93,7 +93,6 @@ section h2 {
     border-radius: 10px;
 }
 
-
 .About ul {
     list-style: none;
     display: flex;
@@ -137,6 +136,11 @@ section h2 {
 
 .About ul li a:hover{
     transform: translate(0, -20px);
+}
+
+.about-content p{
+    color: white;
+    font-size: 100px;
 }
 
 .menuicon{
@@ -424,7 +428,7 @@ margin: 5vh;
     border-radius: 10px;
 }
 
-.theory-blog p {
+.theory-blog p{
 
     margin: 1vw 5vw 1vw 5vw;
 
@@ -434,6 +438,7 @@ margin: 5vh;
 
     font-size: 1rem;
 }
+
 
 .theory-blog h2{
     font-size: 2rem;
