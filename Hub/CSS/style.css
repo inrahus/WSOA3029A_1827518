@@ -256,7 +256,7 @@ transform: translateX(0);
     padding: 1.5vh;
 }
 
-.blog-cards p, .recent-card p{
+.blog-cards p{
     color:white;
 
     font-size: 0.75rem;
@@ -265,7 +265,7 @@ transform: translateX(0);
     padding: 1vh;
 }
 
-.blog-cards h3, .recent-card h3{
+.blog-cards h3{
     color: whitesmoke;
 
     font-size: 1rem;
@@ -275,33 +275,34 @@ transform: translateX(0);
     padding: 1vh;
 }
 
-.blog-cards time, .recent-card time{
+.blog-cards time{
     color: rgb(231, 230, 230);
 
     font-size: 0.6rem;
 }
-.card1, .card2, .card3, .recent-card{
-display: grid;
 
-grid-template-columns: 40vh;
-grid-template-rows: 25vh 40vh;
-grid-template-areas:"image" "text";
+.card1, .card2, .card3, .card4, .card5{
+    display: grid;
 
-border-radius: 20px;
+    grid-template-columns: 40vh;
+    grid-template-rows: 25vh 40vh;
+    grid-template-areas:"image" "text";
 
-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    border-radius: 20px;
 
-background: black;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
 
-text-align: center;
+    background: black;
 
-transition: 0.5s ease;
-cursor: pointer;
+    text-align: center;
 
-margin: 5vh;
+    transition: 0.5s ease;
+    cursor: pointer;
+    
+    margin: 5vh;
 }
 
-.card1-image, .card2-image, .card3-image, .recent-card-image{
+.card1-image, .card2-image, .card3-image, .card4-image, .card5-image{
     grid-area: image;
 
     border-top-left-radius: 15px;
@@ -322,22 +323,26 @@ margin: 5vh;
     background-image: url(Images/DataStory.jpg);
 }
 
-.recent-card-image{
+.card4-image{
     background-image: url(Images/Representation.jpg);
 }
 
-.card1-text, .card2-text, .card3-text, .recent-card-text{
+.card5-image{
+    background-image: url(Images/area_graph.png);
+}
+
+.card1-text, .card2-text, .card3-text, .card4-text, .card5-text{
     grid-area: text;
 
     margin: 25px;
 }
 
-.card1:hover, .card2:hover, .card3:hover, .recent-card:hover{
+.card1:hover, .card2:hover, .card3:hover, .card4:hover, .card5:hover{
     transform: scale(1.1);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
 
-.blog-cards-link-1, .blog-cards-link-2, .blog-cards-link-3, .recent-card-link{
+.blog-cards-link-1, .blog-cards-link-2, .blog-cards-link-3, .blog-cards-link-4, .blog-cards-link-5{
     text-decoration: none;
 }
 
@@ -450,4 +455,8 @@ margin: 5vh;
 
 .blog-buttons{
     display: flex;
+}
+
+.chartcon{
+    background: linear-gradient(to left top, #B7C422, #203A43);
 }
