@@ -433,7 +433,7 @@ transform: translateX(0);
     border-radius: 10px;
 }
 
-.theory-blog p, .about-blog p, .aboutcont p{
+.theory-blog p, .about-blog p{
 
     margin: 1vw 5vw 1vw 5vw;
 
@@ -445,7 +445,7 @@ transform: translateX(0);
 }
 
 
-.theory-blog h2{
+.theory-blog h2, .about-blog h2{
     font-size: 2rem;
 
     margin: 2vw;
@@ -463,4 +463,15 @@ transform: translateX(0);
 
 .chartcon{
     background: linear-gradient(to left top, #B7C422, #203A43);
+}
+
+.About p{
+
+    color:  white;
+
+    font-size: 2rem;
+
+    padding-left: 3vw;
+    padding-right: 3vw;
+ 
 }
