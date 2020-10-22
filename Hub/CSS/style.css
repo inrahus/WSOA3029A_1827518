@@ -281,7 +281,7 @@ transform: translateX(0);
     font-size: 0.6rem;
 }
 
-.card1, .card2, .card3, .card4, .card5{
+.card:nth-child(){
     display: grid;
 
     grid-template-columns: 40vh;
@@ -421,7 +421,11 @@ transform: translateX(0);
     background: linear-gradient(to left top, #C44922, #203A43);
 }
 
-.content-blog{
+.about-blog{
+    background: linear-gradient(to left top, #22C45C, #203A43);
+}
+
+.content-blog, .aboutcontp{
     margin: 1vw 20vw 1.5vw 20vw;
 
     background-color: black;
@@ -429,7 +433,7 @@ transform: translateX(0);
     border-radius: 10px;
 }
 
-.theory-blog p{
+.theory-blog p, .about-blog p, .aboutcont p{
 
     margin: 1vw 5vw 1vw 5vw;
 
