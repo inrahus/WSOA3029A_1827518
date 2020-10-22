@@ -302,7 +302,7 @@ transform: translateX(0);
     margin: 5vh;
 }
 
-.card1-image, .card2-image, .card3-image, .card4-image, .card5-image{
+.card1-image, .card2-image, .card3-image, .card4-image, .card5-image, .card6-image, .card7-image, .card8-image{
     grid-area: image;
 
     border-top-left-radius: 15px;
@@ -324,12 +324,27 @@ transform: translateX(0);
 }
 
 .card4-image{
-    background-image: url(Images/Representation.jpg);
+    background-image: url(xxx);
 }
 
+/*graph*/
 .card5-image{
     background-image: url(Images/area_graph.png);
 }
+
+.card6-image{
+    background-image: url(xxx);
+}
+
+.card7-image{
+    background-image: url(xxx);
+}
+
+/*graph*/
+.card8-image{
+    background-image: url(xxx);
+}
+
 
 .card1-text, .card2-text, .card3-text, .card4-text, .card5-text{
     grid-area: text;
@@ -469,9 +484,8 @@ transform: translateX(0);
 
     color:  white;
 
-    font-size: 2rem;
+    font-size: 1.1rem;
 
-    padding-left: 3vw;
-    padding-right: 3vw;
+    margin: 3.5vw;
  
 }
