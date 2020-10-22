@@ -472,19 +472,18 @@ transform: translateX(0);
     height: 25vw;
 }
 
+.POIMG{
+    height: 50vw;
+}
 .blog-buttons{
     display: flex;
-}
-
-.chartcon{
-    background: linear-gradient(to left top, #B7C422, #203A43);
 }
 
 .About p{
 
     color:  white;
 
-    font-size: 0.75rem;
+    font-size: 1rem;
 
     margin: 3.5vw;
  
