@@ -329,7 +329,7 @@ transform: translateX(0);
 
 /*graph*/
 .card5-image{
-    background-image: url(Images/area_graph.png);
+    background-image: url(Images/piechart.png);
 }
 
 .card6-image{
@@ -440,7 +440,7 @@ transform: translateX(0);
     background: linear-gradient(to left top, #22C45C, #203A43);
 }
 
-.content-blog{
+.content-blog, .datablock{
     margin: 1vw 15vw 1.5vw 15vw;
 
     background-color: black;
@@ -460,12 +460,15 @@ transform: translateX(0);
 }
 
 
-.theory-blog h2, .about-blog h2{
+.theory-blog h2, .about-blog h2, .datablock h2{
     font-size: 2rem;
 
     margin: 2vw;
 
     text-align: center;
+
+    font-size: 2.5rem;
+    color: white;
 }
 
 .DVIMG{
@@ -487,4 +490,9 @@ transform: translateX(0);
 
     margin: 3.5vw;
  
+}
+
+.datacon{
+
+    background: linear-gradient(to left top, #B7C422, #203A43);
 }
