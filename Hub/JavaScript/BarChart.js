@@ -7,7 +7,7 @@ const data = [
     { month: 'Jul', number: 83998 }
 ]
 
-const width = 1000;
+const width = 1500;
 const height = 700;
 const margin = { top: 50, bottom: 50, left: 250, right: 50 }
 
