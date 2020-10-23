@@ -1,16 +1,16 @@
 
-var width = 1000,
+const width = 1000,
     height = 600;
 
 var colors = d3.scaleOrdinal(d3.schemeTableau10);
 
-var svg = d3.select("#my_viz")
+const svg = d3.select("#my_viz")
     .append("svg")
     .attr("width", width)
     .attr("height", height)
     .style("background", "black");
 
-var details = [
+const details = [
     { status: "Deaths: 5", number: 5 },
     { status: "Recovered Cases: 31", number: 31 },
     { status: "Active Cases: 1317", number: 1317 }
