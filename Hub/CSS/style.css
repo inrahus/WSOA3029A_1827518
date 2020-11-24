@@ -361,7 +361,7 @@ transform: translateX(0);
     text-decoration: none;
 }
 
-.viewbtn{
+.viewbtn, .viewbtn2{
     position: relative;
     display: inline-block;
     
@@ -388,6 +388,12 @@ transform: translateX(0);
     transform: translate(0, -10px);
 
     color: #d45731;
+}
+
+.viewbtn2:hover{
+    transform: translate(0, -10px);
+
+    color: #B7C422;
 }
 
 .other-Home{
@@ -448,7 +454,7 @@ transform: translateX(0);
     border-radius: 10px;
 }
 
-.theory-blog p, .about-blog p{
+.theory-blog p, .about-blog p, .datablock p{
 
     margin: 1vw 5vw 1vw 5vw;
 

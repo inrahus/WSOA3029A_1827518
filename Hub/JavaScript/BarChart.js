@@ -7,6 +7,8 @@ const data = [
     { month: 'Jul', number: 83998 }
 ]
 
+var colors = d3.scaleOrdinal(d3.schemeTableau10);
+
 const width = 1500;
 const height = 700;
 const margin = { top: 50, bottom: 50, left: 250, right: 50 }
@@ -27,7 +29,7 @@ const y = d3.scaleLinear()
 
 svg
     .append("g")
-    .attr("fill", 'royalblue')
+    .attr("fill", 'yellowgreen')
     .selectAll("rect")
     .data(data.sort((a, b) => d3.ascending(a.number
         , b.number
