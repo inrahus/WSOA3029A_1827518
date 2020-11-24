@@ -7,7 +7,7 @@ const data = [
     { month: 'Jul', number: 83998 }
 ]
 
-var colors = d3.scaleOrdinal(d3.schemeTableau10);
+//var colors = d3.scaleOrdinal(d3.schemeTableau10);
 
 const width = 1500;
 const height = 700;
