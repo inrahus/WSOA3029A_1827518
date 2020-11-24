@@ -337,11 +337,25 @@ transform: translateX(0);
 }
 
 .card7-image{
-    background-image: url(xxx);
+    background-image: url(Images/Salavon.png);
 }
 
 /*graph*/
 .card8-image{
+    background-image: url(Images/barchart.png);
+}
+
+.card9-image{
+    background-image: url(Images/Salavon.png);
+}
+
+/*graph*/
+.card10-image{
+    background-image: url(Images/barchart.png);
+}
+
+/*graph*/
+.card11-image{
     background-image: url(Images/barchart.png);
 }
 
