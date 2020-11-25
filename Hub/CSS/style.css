@@ -356,7 +356,7 @@ transform: translateX(0);
 
 /*graph*/
 .card11-image{
-    background-image: url(Images/barchart.png);
+    background-image: url(Images/examgraph.png);
 }
 
 
@@ -515,4 +515,29 @@ transform: translateX(0);
 .datacon{
 
     background: linear-gradient(to left top, #B7C422, #203A43);
+}
+
+.x.axis path {
+    stroke: white !important;
+    fill: none;
+    
+}
+
+.y.axis path{
+    stroke: white !important;
+   fill: none;
+}
+
+.x.axis text{
+    fill: white;
+
+}
+
+.y.axis text{
+    fill: white;
+  
+}
+
+.caption{
+    fill: white;
 }

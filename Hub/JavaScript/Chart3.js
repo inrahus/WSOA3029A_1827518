@@ -1,6 +1,3 @@
-var salesData;
-var truncLengh = 30;
-
 $(document).ready(function () {
     Plot();
 });
@@ -47,7 +44,44 @@ function bakePie(id, chartData, options) {
     var g = chart.selectAll(".arc")
         .data(pie(runningData))
         .enter().append("g")
-        .attr("class", "arc");
+        .attr("class", "arc")
+        .on("mouseenter", function (d) {
+            d3.select(this)
+                .attr("stroke", "white")
+                .attr("stroke-width", 1)
+                .attr("height", function (d) {
+                    return height - y(d[yVarName]) + 5;
+                })
+                .attr("y", function (d) {
+                    return y(d.Total) + margin.top - 20;
+                })
+                .attr("width", x.rangeBand() + 10)
+                .attr("x", function (d) {
+                    return (margin.left - 5);
+                })
+                .transition()
+                .duration(200);
+
+
+        })
+        .on("mouseleave", function (d) {
+            d3.select(this)
+                .attr("stroke", "none")
+                .attr("height", function (d) {
+                    return height - y(d[yVarName]);;
+                })
+                .attr("y", function (d) {
+                    return y(d[yVarName]) + margin.top - 15;
+                })
+                .attr("width", x.rangeBand())
+                .attr("x", function (d) {
+                    return (margin.left);
+                })
+                .transition()
+                .duration(200);
+
+        })
+        ;
 
     var count = 0;
 
@@ -112,26 +146,26 @@ function bakePie(id, chartData, options) {
 
 function TransformChartData(chartData, opts) {
     var result = [];
-    var resultColors = [];
+    var myColors = [];
     var counter = 0;
-    var hasMatch;
+    var doesMatch;
     var xVarName;
     var yVarName = opts[0].yaxis;
 
     xVarName = opts[0].xaxis;
 
     for (var i in chartData) {
-        hasMatch = false;
+        doesMatch = false;
         for (var index = 0; index < result.length; ++index) {
             var data = result[index];
 
             if (data[xVarName] == chartData[i][xVarName]) {
                 result[index][yVarName] = result[index][yVarName] + chartData[i][yVarName];
-                hasMatch = true;
+                doesMatch = true;
                 break;
             }
         }
-        if (hasMatch == false) {
+        if (doesMatch == false) {
             ditem = {};
             ditem[xVarName] = chartData[i][xVarName];
             ditem[yVarName] = chartData[i][yVarName];
@@ -139,14 +173,14 @@ function TransformChartData(chartData, opts) {
             ditem["title"] = opts[0].captions != undefined ? opts[0].captions[0][chartData[i][xVarName]] : "";
             result.push(ditem);
 
-            resultColors[counter] = opts[0].color != undefined ? opts[0].color[0][chartData[i][xVarName]] : "";
+            myColors[counter] = opts[0].color != undefined ? opts[0].color[0][chartData[i][xVarName]] : "";
 
             counter += 1;
         }
     }
 
     runningData = result;
-    runningColors = resultColors;
+    runningColors = myColors;
     return;
 }
 

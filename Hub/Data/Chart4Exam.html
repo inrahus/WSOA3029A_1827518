@@ -49,48 +49,55 @@
 
     <section class="datacon">
         <div class="datablock">
-            <h2 class>Total Number of Confirmed Cases Each Month in South Africa - March 2020 to November 2020</h2>
-
-            <div id="chart" style="height:650px;width:650px">
-                <div class="innerCont"
-                    style="overflow: auto; top:50px; left: 200px; height:91% ; Width:100%; position: relative; overflow: hidden;">
-                </div>
-            </div>
+            <h2 class>Total Number of Confirmed Cases Each Month in South Africa - April 2020 to November 2020</h2>
 
             <script src="https://code.jquery.com/jquery-1.12.4.min.js" charset="utf-8"></script>
             <script src="https://d3js.org/d3.v2.min.js"></script>
+            <script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
+
+            <div id="chart" style="height:650px;width:650px">
+                <div class="innerCont"
+                    style="overflow: auto; top:50px; left: 100px; height:91% ; Width:110%; position: relative; overflow: hidden;">
+                </div>
+            </div>
 
             <p>
-                For this chart, I decided to experiment with some interactive features - despite not being able to
-                clearly visualise them for the viewer. As you can see, there are some readabilty issues with the chart -
-                particularly with regard to the numbers on the chart. However, when hovering over each section or even
-                the corresponding colour in the legend, we can see the number for each month/colour clearly. There is
-                also a disparity in the in-pie text versus the legend text - I am still sorting out how to change this
-                and hopefully will achieve it in time.
+                With this graph, I think I was clearly able to show the extent of my D3 abilities, as well as my overal
+                competency with JS. Although I did struggle, and this can cleary be seen in the size of the graph which
+                I couldn't really figure out how to change wthout my whole graph disappearng. I am howevevr very happy
+                with the result - particuarly in terms of colour, and in the display of interactivity with which I
+                struggled for so long with over the semester.
             </p>
             <p>
-                I am actually very happy with this chart - it was initally a missing part of my previous submission and
-                so, I used it to experiement with some components that I would like to use in my final submission
-                visualisation. I was also able to finally see how to use my own colours for a color scale and so, I used
-                all colours present in the website, as well as some additional colours that I felt would brightly suit.
+                In this visualisation, I wanted to further show the data in it's individual components. However, an
+                issue I only noticed post completion, is that on return to the main graph, the bars reverse in position.
+                I was unable to address this in time, but I am stil heavily satisfied with the final outcome of my
+                project, especially considering the numerous stuggles I encountered in this section of work thorough the
+                semester.
             </p>
             <p>
-                Overall, I do not think the pie chart best represents the data - which was again, manually entered, but
-                I do think that I have a clear idea and go-ahead for my final visualisation, as well as for the
-                interactivity that I want to use for it. Looking over all my charts, I
-                think there is a clear progression and significant progress with my capabilities in D3. However, at this
-                current point, I think there is still a significant lack in the progress of combining the visual
-                cohesively to my site. This is my primary goal for my final visual, as well as something I wish to
-                tackle and express in my final theoretical post.
+                With the new undrstanding of tooltips - which I incorporated into my last graph, but did not clearly
+                communicate to the user - I was able to further on this and create a meaningful hover effect that
+                allowed me to showcase the information from the tooltip to the viewer in a more cohesive and interactive
+                style. And I also incorporated the highlighting feature - also used before - to further the
+                interactivity. I also used a cursor change to a pointer so that there was clear indication that the bars
+                could be clicked. In retrospect, I feel that I could have possibly done more to show the clicking aspect
+                of the bar alongside the highlighting.
             </p>
-
             <p>
-                (Also, I am not quite sure what I did, but it seems my return button has shited from it's center for
-                some
-                reason, and I cannot move it back to center for this post - but again, hopefully it will be fine in my
-                final.)
+                Another point to note, is that this data set is the same as previous, but with more depth into the
+                individual compnentes that make up the massive number of confirmed cases. I also shifted the range of
+                data fom MArch to November, to April to November. This was because the bar for March was so smal, no
+                interactive compoments could work with it. If I could have figured out the size of my graph in time, I
+                belive I would have left it in, and showcases the full amount of COVID data in South Africa since the
+                beginning of quarantine.
             </p>
-
+            <p>
+                I aso changed the colour scale - although it incorporates colours from the website, I tried to show the
+                increase with a sense of emergency, particularly in the moevement from green to yellow to red. I feel
+                that this does come across, but that if the graph was larger, the severity would be better
+                communicated.
+            </p>
             <center>
                 <div class="blog-buttons">
                     <a class="viewbtn2" href="https://inrahus.github.io/WSOA3029A_1827518/index.html#Content">Return</a>
@@ -101,7 +108,7 @@
 
 
     <script src=" ../JavaScript/responsive.js"></script>
-    <script src="../JavaScript/Chart3.js"></script>
+    <script src="../JavaScript/Chart4Exam.js"></script>
 
 
 </body>
