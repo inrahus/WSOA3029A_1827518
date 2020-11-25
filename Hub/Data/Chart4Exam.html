@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale+1.0, minimum-scale=1.0">
+    <meta http-equiv="X-AU-Compatible" content="ie=edge">
+
+    meta name="author" content="inrahus.">
+    <meta name="description"
+        content="  vis.co revolves around data visualisation, particularly in terms of COVID-19 related
+        data,
+        based in the South African context. The data visualisation below, in the form of a donut chart, shows the total number of cases reported each month of COVID in South Africa">
+
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" -->
+
+    <title>
+        Total Number of Confirmed Cases Each Month in South Africa
+    </title>
+</head>
+
+<body>
+    <nav>
+        <h1>
+            Data. - vis.co
+        </h1>
+
+        <div class="menuicon">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+
+        </div>
+        <ul class="nav-links">
+            <li><a class="other-Home" href="https://inrahus.github.io/WSOA3029A_1827518/index.html#Home">Home</a></li>
+            <li><a class="other-About" href="https://inrahus.github.io/WSOA3029A_1827518/index.html#About">About</a>
+            </li>
+            <li><a class="other-Content" href="https://inrahus.github.io/WSOA3029A_1827518/index.html#Content">Data</a>
+            </li>
+            <li><a class="other-Academics"
+                    href="https://inrahus.github.io/WSOA3029A_1827518/index.html#Academics">Blogs</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <section class="datacon">
+        <div class="datablock">
+            <h2 class>Total Number of Confirmed Cases Each Month in South Africa - March 2020 to November 2020</h2>
+
+            <div id="chart" style="height:650px;width:650px">
+                <div class="innerCont"
+                    style="overflow: auto; top:50px; left: 200px; height:91% ; Width:100%; position: relative; overflow: hidden;">
+                </div>
+            </div>
+
+            <script src="https://code.jquery.com/jquery-1.12.4.min.js" charset="utf-8"></script>
+            <script src="https://d3js.org/d3.v2.min.js"></script>
+
+            <p>
+                For this chart, I decided to experiment with some interactive features - despite not being able to
+                clearly visualise them for the viewer. As you can see, there are some readabilty issues with the chart -
+                particularly with regard to the numbers on the chart. However, when hovering over each section or even
+                the corresponding colour in the legend, we can see the number for each month/colour clearly. There is
+                also a disparity in the in-pie text versus the legend text - I am still sorting out how to change this
+                and hopefully will achieve it in time.
+            </p>
+            <p>
+                I am actually very happy with this chart - it was initally a missing part of my previous submission and
+                so, I used it to experiement with some components that I would like to use in my final submission
+                visualisation. I was also able to finally see how to use my own colours for a color scale and so, I used
+                all colours present in the website, as well as some additional colours that I felt would brightly suit.
+            </p>
+            <p>
+                Overall, I do not think the pie chart best represents the data - which was again, manually entered, but
+                I do think that I have a clear idea and go-ahead for my final visualisation, as well as for the
+                interactivity that I want to use for it. Looking over all my charts, I
+                think there is a clear progression and significant progress with my capabilities in D3. However, at this
+                current point, I think there is still a significant lack in the progress of combining the visual
+                cohesively to my site. This is my primary goal for my final visual, as well as something I wish to
+                tackle and express in my final theoretical post.
+            </p>
+
+            <p>
+                (Also, I am not quite sure what I did, but it seems my return button has shited from it's center for
+                some
+                reason, and I cannot move it back to center for this post - but again, hopefully it will be fine in my
+                final.)
+            </p>
+
+            <center>
+                <div class="blog-buttons">
+                    <a class="viewbtn2" href="https://inrahus.github.io/WSOA3029A_1827518/index.html#Content">Return</a>
+                </div>
+            </center>
+
+    </section>
+
+
+    <script src=" ../JavaScript/responsive.js"></script>
+    <script src="../JavaScript/Chart3.js"></script>
+
+
+</body>
+
+</html>
