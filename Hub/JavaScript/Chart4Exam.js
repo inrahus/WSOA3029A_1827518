@@ -1,15 +1,19 @@
 
-var salesData;
+var covidData;
 var truncLengh = 30;
+
 $(document).ready(function () {
     Plot();
 });
+
+
 function Plot() {
     TransformChartData(chartData, chartOptions);
-    BuildBar("chart", chartData, chartOptions);
+    buildaBarChart("chart", chartData, chartOptions);
 }
 
-function BuildBar(id, chartData, options, level) {
+//make the actual chart bro
+function buildaBarChar(id, chartData, options, level) {
     //d3.selectAll("#" + id + " .innerCont").remove();
     //$("#" + id).append(chartInnerDiv);
     chart = d3.select("#" + id + " .innerCont");
@@ -27,20 +31,20 @@ function BuildBar(id, chartData, options, level) {
         xVarName = options[0].xaxis;
     }
 
-    var xAry = runningData.map(function (el) {
+    var xAry = runDat.map(function (el) {
         return el[xVarName];
     });
 
-    var yAry = runningData.map(function (el) {
+    var yAry = runDat.map(function (el) {
         return el[yVarName];
     });
 
-    var capAry = runningData.map(function (el) { return el.caption; });
+    var capAry = runDat.map(function (el) { return el.caption; });
 
 
     var x = d3.scale.ordinal().domain(xAry).rangeRoundBands([0, width], .5);
-    var y = d3.scale.linear().domain([0, d3.max(runningData, function (d) { return d[yVarName]; })]).range([height, 0]);
-    var rcolor = d3.scale.ordinal().range(runningColors);
+    var y = d3.scale.linear().domain([0, d3.max(runDat, function (d) { return d[yVarName]; })]).range([height, 0]);
+    var rcolor = d3.scale.ordinal().range(runCol);
 
     chart = chart
         //SVG in chart
@@ -51,7 +55,7 @@ function BuildBar(id, chartData, options, level) {
         .attr("height", height + margin.top + margin.bottom);
 
     var bar = chart.selectAll("g")
-        .data(runningData)
+        .data(runDat)
         .enter()
         .append("g")
         .attr("transform", function (d) {
@@ -69,7 +73,7 @@ function BuildBar(id, chartData, options, level) {
                 return mapper[d]
             }
             else {
-                var r = runningData[ctrtxt].caption;
+                var r = runDat[ctrtxt].caption;
                 ctrtxt += 1;
                 return r;
             }
@@ -77,7 +81,8 @@ function BuildBar(id, chartData, options, level) {
 
     var yAxis = d3.svg.axis()
         .scale(y)
-        .orient("left").ticks(10); //orient left because y-axis tick labels will appear on the left side of the axis.
+        //Make itleft because y-axis tick labels will appear on the left side of the axis.
+        .orient("left").ticks(10);
 
     bar.append("rect")
         .attr("y", function (d) {
@@ -139,14 +144,16 @@ function BuildBar(id, chartData, options, level) {
             d3.selectAll("#" + id + " svg").remove();
             if (level == 1) {
                 TransformChartData(chartData, options, 0, d[xVarName]);
-                BuildBar(id, chartData, options, 0);
+                buildaBarChart
+                    (id, chartData, options, 0);
             }
             else {
-                var nonSortedChart = chartData.sort(function (a, b) {
+                var noVoiceBox = chartData.sort(function (a, b) {
                     return parseFloat(b[options[0].yaxis]) - parseFloat(a[options[0].yaxis]);
                 });
-                TransformChartData(nonSortedChart, options, 1, d[xVarName]);
-                BuildBar(id, nonSortedChart, options, 1);
+                TransformChartData(noVoiceBox, options, 1, d[xVarName]);
+                buildaBarChart
+                    (id, noVoiceBox, options, 1);
             }
 
         });
@@ -202,6 +209,27 @@ function BuildBar(id, chartData, options, level) {
         .attr("dy", ".71em")
         .style("text-anchor", "end")
 
+    // the label for x axis
+    //     chart.append("text")
+    //     .attr("class", "x label")
+    //     .attr("text-anchor", "middle")
+    //     .attr("x", 450)
+    //     .attr("y", height + 100)
+
+    //     .attr('fill', 'white')
+    //     .text("Month");
+
+    // the label for y axis
+    // chart.append("text")
+    //     .attr("class", "y label")
+    //     .attr("text-anchor", "middle")
+    //     .attr("y", 75)
+    //     .attr("x", -250)
+    //     .attr('fill', 'white')
+    //     .attr("dy", ".75em")
+    //     .attr("transform", "rotate(-90)")
+    //     .text("Total Number of Confirmed Cases");
+
     if (level == 1) {
         chart.select(".x.axis")
             .selectAll("text")
@@ -210,11 +238,12 @@ function BuildBar(id, chartData, options, level) {
 
 }
 
+//Parse? Data - make data fit in
 function TransformChartData(chartData, opts, level, filter) {
     var result = [];
-    var resultColors = [];
+    var finalColors = [];
     var counter = 0;
-    var hasMatch;
+    var hasSameStuffing;
     var xVarName;
     var yVarName = opts[0].yaxis;
 
@@ -222,18 +251,18 @@ function TransformChartData(chartData, opts, level, filter) {
         xVarName = opts[0].xaxisl1;
 
         for (var i in chartData) {
-            hasMatch = false;
+            hasSameStuffing = false;
             for (var index = 0; index < result.length; ++index) {
                 var data = result[index];
 
                 if ((data[xVarName] == chartData[i][xVarName]) && (chartData[i][opts[0].xaxis]) == filter) {
                     result[index][yVarName] = result[index][yVarName] + chartData[i][yVarName];
-                    hasMatch = true;
+                    hasSameStuffing = true;
                     break;
                 }
 
             }
-            if ((hasMatch == false) && ((chartData[i][opts[0].xaxis]) == filter)) {
+            if ((hasSameStuffing == false) && ((chartData[i][opts[0].xaxis]) == filter)) {
                 if (result.length < 9) {
                     ditem = {}
                     ditem[xVarName] = chartData[i][xVarName];
@@ -243,7 +272,7 @@ function TransformChartData(chartData, opts, level, filter) {
                     ditem["op"] = 1.0 - parseFloat("0." + (result.length));
                     result.push(ditem);
 
-                    resultColors[counter] = opts[0].color[0][chartData[i][opts[0].xaxis]];
+                    finalColors[counter] = opts[0].color[0][chartData[i][opts[0].xaxis]];
 
                     counter += 1;
                 }
@@ -254,17 +283,17 @@ function TransformChartData(chartData, opts, level, filter) {
         xVarName = opts[0].xaxis;
 
         for (var i in chartData) {
-            hasMatch = false;
+            hasSameStuffing = false;
             for (var index = 0; index < result.length; ++index) {
                 var data = result[index];
 
                 if (data[xVarName] == chartData[i][xVarName]) {
                     result[index][yVarName] = result[index][yVarName] + chartData[i][yVarName];
-                    hasMatch = true;
+                    hasSameStuffing = true;
                     break;
                 }
             }
-            if (hasMatch == false) {
+            if (hasSameStuffing == false) {
                 ditem = {};
                 ditem[xVarName] = chartData[i][xVarName];
                 ditem[yVarName] = chartData[i][yVarName];
@@ -273,7 +302,7 @@ function TransformChartData(chartData, opts, level, filter) {
                 ditem["op"] = 1;
                 result.push(ditem);
 
-                resultColors[counter] = opts[0].color != undefined ? opts[0].color[0][chartData[i][xVarName]] : "";
+                finalColors[counter] = opts[0].color != undefined ? opts[0].color[0][chartData[i][xVarName]] : "";
 
                 counter += 1;
             }
@@ -281,8 +310,8 @@ function TransformChartData(chartData, opts, level, filter) {
     }
 
 
-    runningData = result;
-    runningColors = resultColors;
+    runDat = result;
+    runCol = finalColors;
     return;
 }
 
